@@ -39,6 +39,10 @@ const routes= [
     path:"/product-manage/productlist",
     component:ProductList
     },
+    {
+    path:"/",
+    redirect:"/index"
+    },
 ]
 
 export default routes
