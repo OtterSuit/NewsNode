@@ -144,6 +144,7 @@ const particlesInit = async engine => {
 
 const submitForm = ()=>{
     console.log('登录')
+    localStorage.getItem('111')
 }
 
 const particlesLoaded = async container => {
