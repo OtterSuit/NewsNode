@@ -6,6 +6,7 @@ import NewsAdd from '../views/news-manage/NewsAdd'
 import NewsList from '../views/news-manage/NewsList'
 import ProductAdd from '../views/product-manage/ProductAdd'
 import ProductList from '../views/product-manage/ProductList'
+import NotFound from '../views/notfound/NotFound'
 const routes= [  
     {
     path:"/index",
@@ -43,6 +44,11 @@ const routes= [
     path:"/",
     redirect:"/index"
     },
+    {
+        path:"/:pathMatch(.*)*",
+        name:"notfound",
+        component:NotFound
+    }
 ]
 
 export default routes
