@@ -1,6 +1,6 @@
 <template>
-    <el-aside :width="$store.state.isCollapsed?'64px':'200px'">
-        <el-menu :collapse="$store.state.isCollapsed" :collapse-transition="false">
+    <el-aside :width="$store.state.isCollapsed?'64px':'240px'">
+        <el-menu :collapse="$store.state.isCollapsed" :collapse-transition="false" :router="true" :default-active="route.fullPath">
         <el-menu-item index="/index">
           <el-icon><HomeFilled /></el-icon>
           <span>首页</span>
@@ -41,11 +41,17 @@
 
 <script setup>
 import {HomeFilled,UserFilled,Promotion,MessageBox} from '@element-plus/icons-vue'
-import store from '@/store';
+import store from '@/store'
+import { useRoute } from 'vue-router'
+const route = useRoute()
+console.log(route.fullPath);
 </script>
 
 <style lang="scss" scoped>
 .el-aside{
     height: 100vh;
+  .el-menu{
+    height: 100vh;
+  }
 }
 </style>
